@@ -1,0 +1,104 @@
+<section class="section-profile-cover section-shaped my-0">
+  <!-- Circles background -->
+  <div class="shape shape-style-1 shape-primary alpha-4">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- SVG separator -->
+  <div class="separator separator-bottom separator-skew">
+    <svg
+      x="0"
+      y="0"
+      viewBox="0 0 2560 100"
+      preserveAspectRatio="none"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</section>
+
+<section class="section">
+  <div class="col-md-12">
+    <div class="card shadow mt--300">
+      <div class="px-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 order-lg-2 text-lg-center align-self-lg-center">
+            <div class="card-header">
+              <h5 class="title">Product Add Form</h5>
+            </div>
+          </div>
+          <div class="col-lg-12 order-lg-2 text-lg-left align-self-lg-center">
+            <div class="card-body">
+              <form [formGroup]="productAddForm">
+                <div class="form-group">
+                  <div class="md-3">
+                    <label for="productName"> Ürün adı</label>
+                    <input
+                      type="text"
+                      id="productName"
+                      formControlName="productName"
+                      placeholder="Ürün adı"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="md-3">
+                    <label for="categoryId"> Kategori</label>
+                    <input
+                      type="number"
+                      id="categoryId"
+                      formControlName="categoryId"
+                      placeholder="Kategori"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="md-3">
+                    <label for="unitsInStock"> Ürün adedi</label>
+
+                    <input
+                      type="number"
+                      id="unitsInStock"
+                      formControlName="unitsInStock"
+                      placeholder="Ürün adedi"
+                      class="form-control"
+                    />
+                  </div>
+
+                  <div class="md-3">
+                    <label for="unitPrice"> Ürün fiyatı</label>
+                    <input
+                      type="number"
+                      id="unitPrice"
+                      formControlName="unitPrice"
+                      placeholder="Ürün fiyatı"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </form>
+              <br />
+              <div class="card-footer">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button
+                    type="button"
+                    (click)="productAdd()"
+                    class="btn btn-primary me-md-2"
+                  >
+                    Ürün ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
