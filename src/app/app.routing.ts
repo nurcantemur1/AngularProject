@@ -10,6 +10,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './sections/product/product.component';
 import { ProductAddComponent } from './sections/product-add/product-add.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
@@ -20,7 +21,7 @@ const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'products', component: ProductComponent },
     { path: 'products/category/:categoryId', component: ProductComponent },
-    { path: 'products/Add', component: ProductAddComponent },
+    { path: 'products/Add', component: ProductAddComponent, canActivate:[LoginGuard] },
 
 ];
 
